@@ -2,9 +2,11 @@ name: CI/CD Pipeline & GitHub Pages Deployment
 
 on:
   push:
-    branches: [ "master", "main", "feat/online-resume" ]
+    branches: 
+      - main
   pull_request:
-    branches: [ "master", "main" ]
+    branches: 
+      - main
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
