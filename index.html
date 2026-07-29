@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>Bill Caffery | Senior Software & Systems Engineer</title>
+  <meta name="description" content="Personal online resume and portfolio of Bill Caffery - Senior Software & Systems Engineer specializing in modern web applications, distributed systems, and developer tools.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Design System -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JS-YAML CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+</head>
+<body>
+  <!-- Ambient Glass Backdrop Orbs & Glare Sheen Layer -->
+  <div class="glass-bg">
+    <div class="glass-shine-layer"></div>
+    <div class="glass-orb orb-1"></div>
+    <div class="glass-orb orb-2"></div>
+    <div class="glass-orb orb-3"></div>
+  </div>
+
+  <!-- Fixed Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-icon">⚡</div>
+        <span>Bill Caffery</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#offer" class="btn-primary">Send Offer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span> Available for Select Remote Opportunities
+            </div>
+            <h1 class="hero-title">
+              <span class="gradient-text" id="hero-name">William (Bill) Caffery</span>
+            </h1>
+            <h2 class="hero-subtitle" id="hero-title">Senior Software & Systems Engineer</h2>
+            <p class="hero-bio" id="hero-bio">
+              Architecting resilient web applications, cloud infrastructure, and intelligent developer tools. Passionate about clean architecture and high-performance software.
+            </p>
+            
+            <div class="hero-actions">
+              <a href="#offer" class="btn-primary">Send Me a Job Offer</a>
+              <a href="#projects" class="btn-secondary">Explore Work</a>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/billythakidd04" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="mailto:bill.caffery@example.com" id="contact-email-link" class="social-icon" title="Email Direct">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="avatar-card">
+            <img src="Gemini_Generated_Image_97mvmi97mvmi97mv.jpeg" alt="Bill Caffery" id="hero-avatar" class="avatar-image">
+          </div>
+      </div>
+    </section>
+
+    <!-- Years of Experience Section -->
+    <section id="years-of-experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Track Record & Mastery</span>
+          <h2 class="section-title">Years of Experience</h2>
+        </div>
+
+        <div class="stats-grid" id="stats-container">
+          <!-- Dynamically populated from resume.yaml -->
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;" id="toggle-stats-wrapper">
+          <button id="toggle-stats-btn" class="btn-secondary">
+            Show All Traits & Skills (<span id="stats-total-count">21</span>) ↓
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills & Capabilities</h2>
+        </div>
+        <div class="skills-grid" id="skills-container">
+          <!-- Dynamically populated from resume.yaml -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career Journey</span>
+          <h2 class="section-title">Work Experience</h2>
+        </div>
+        <div class="timeline" id="experience-container">
+          <!-- Dynamically populated from resume.yaml -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio & Open Source</span>
+          <h2 class="section-title">Personal Projects</h2>
+        </div>
+
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-filter="all">All Projects</button>
+          <button class="tab-btn" data-filter="fullstack">Fullstack / Enterprise</button>
+          <button class="tab-btn" data-filter="web">Web Apps</button>
+          <button class="tab-btn" data-filter="frontend">Frontend / Visualizers</button>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+          <!-- Dynamically populated from resume.yaml -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Compact Education & Certifications -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;" class="responsive-subgrid">
+          <div>
+            <h3 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">Education</h3>
+            <div class="compact-grid" id="education-container"></div>
+          </div>
+          <div>
+            <h3 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">Certifications</h3>
+            <div class="compact-grid" id="certs-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Send Me a Job Offer Interactive Section -->
+    <section id="offer" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Direct Opportunities</span>
+          <h2 class="section-title">Send Me a Job Offer</h2>
+          <p style="color: var(--text-muted); max-width: 600px; margin: 0.5rem auto 0;">
+            Hiring manager or recruiter? Provide a brief intro and key role details below to send a structured offer directly.
+          </p>
+        </div>
+
+        <div class="offer-card">
+          <form id="offer-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="offer-sender-name">Your Name / Recruiter Name *</label>
+                <input type="text" id="offer-sender-name" placeholder="e.g. Sarah Connor" required />
+              </div>
+              <div class="form-group">
+                <label for="offer-sender-email">Your Email Address *</label>
+                <input type="email" id="offer-sender-email" placeholder="sarah@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="offer-company">Company Name *</label>
+                <input type="text" id="offer-company" placeholder="e.g. TechCorp Systems" required />
+              </div>
+              <div class="form-group">
+                <label for="offer-role-title">Role Title *</label>
+                <input type="text" id="offer-role-title" placeholder="e.g. Lead Systems Engineer" required />
+              </div>
+              <div class="form-group">
+                <label for="offer-salary">Target Compensation / Salary Range</label>
+                <input type="text" id="offer-salary" placeholder="e.g. $160k - $190k + Equity" />
+              </div>
+              <div class="form-group">
+                <label for="offer-work-mode">Work Mode</label>
+                <select id="offer-work-mode">
+                  <option value="Remote (US / Global)">Remote (US / Global)</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="On-site">On-site</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="offer-intro-msg">Basic Intro & Note *</label>
+                <textarea id="offer-intro-msg" rows="4" placeholder="Hi Bill, I'm reaching out regarding an exciting lead software engineering position..." required></textarea>
+              </div>
+
+              <!-- Attach Job Description / Offer File Dropzone -->
+              <div class="form-group full-width">
+                <label>Attach Offer Letter or Job Description (Optional)</label>
+                <div class="dropzone" id="offer-dropzone">
+                  <div class="dropzone-icon">📄</div>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Drag & drop file here (PDF, DOCX, TXT) or <span style="color: var(--accent-cyan); text-decoration: underline;">click to browse</span>
+                  </p>
+                  <input type="file" id="offer-file-input" accept=".pdf,.docx,.txt,.json" style="display: none;" />
+                  <div class="file-preview" id="file-preview-name"></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 1.5rem;">
+              <button type="submit" class="btn-primary" style="padding: 0.85rem 2.2rem; font-size: 1rem;">
+                🚀 Generate & Submit Offer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Bill Caffery. Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="toast"></div>
+
+  <!-- Main App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

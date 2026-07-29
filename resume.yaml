@@ -1,0 +1,239 @@
+# Personal Resume Data for William V. Caffery
+# Edit this file to update any information on your website!
+
+personal:
+  name: "William (Bill) Caffery"
+  title: "Software / Security / DevSecOps Engineer"
+  tagline: "Building greenfield security tools, AI-driven workflows, resilient cloud infrastructure, and enterprise web solutions."
+  bio: "Senior Software Engineer with over 20 years of experience architecting secure web applications, custom e-commerce integrations, CI/CD deployment pipelines, and high-throughput backend services in PHP, Go, Python, and more. As an early adopter of AI tools, I have leveraged them to enhance my development workflow and create innovative solutions while saving time and maitaining the same secure practices and outcomes."
+  email: "caffery.william@gmail.com"
+  phone: "716-912-1812"
+  location: "West Seneca, NY (Available for remote work only)"
+  github: "https://github.com/billythakidd04"
+  avatar: "Gemini_Generated_Image_97mvmi97mvmi97mv.jpeg"
+  career_start_year: 2012
+  resume_pdf_url: "#"
+
+stats:
+  - label: "Linux"
+    start_year: 2004
+
+  - label: "Git"
+    start_year: 2012
+
+  - label: "Software Engineering"
+    start_year: 2012
+
+  - label: "PHP"
+    start_year: 2012
+
+  - label: "MySQL"
+    start_year: 2012
+
+  - label: "DevOps & CI/CD"
+    start_year: 2014
+
+  - label: "Jenkins"
+    start_year: 2014
+
+  - label: "Cloud Architecture"
+    start_year: 2016
+
+  - label: "JavaScript"
+    start_year: 2016
+
+  - label: "Golang"
+    start_year: 2017
+
+  - label: "MongoDB"
+    start_year: 2018
+
+  - label: "Team Lead / Management"
+    start_year: 2018
+
+  - label: "AWS"
+    start_year: 2018
+
+  - label: "Python"
+    start_year: 2020
+
+  - label: "Postgres"
+    start_year: 2020
+
+  - label: "SQLite"
+    start_year: 2020
+
+  - label: "GitHub Actions"
+    start_year: 2020
+
+  - label: "Bash"
+    start_year: 2022
+
+  - label: "AI Tools"
+    start_year: 2023
+
+  - label: "Security Engineering"
+    start_year: 2024
+
+  - label: "Phing"
+    start_year: 2024
+
+skills:
+  - category: "Languages & Frameworks"
+    items:
+      - name: "PHP (Laravel, Symfony, Yii, Slim, WordPress)"
+        level: "Expert"
+      - name: "Golang, Python, Bash & Linux Shell Scripting"
+        level: "Proficient"
+      - name: "JavaScript / jQuery / HTML5 / CSS3"
+        level: "Advanced"
+      - name: "C++, Java"
+        level: "Proficient"
+
+  - category: "DevOps & Infrastructure"
+    items:
+      - name: "CI/CD (GitHub Actions, Jenkins)"
+        level: "Expert"
+      - name: "Amazon AWS (EC2, CloudWatch, Systems Manager, S3)"
+        level: "Proficient"
+      - name: "Linux Server Administration & Hardware"
+        level: "Advanced"
+      - name: "Git Version Control Management and Git Flow"
+        level: "Expert"
+      - name: "Elastic/Grafana"
+        level: "Advanced"
+
+  - category: "Databases, AI & Security"
+    items:
+      - name: "MySQL, MariaDB, Postgres, SQLite"
+        level: "Proficient"
+      - name: "MongoDB & NoSQL Storage"
+        level: "Advanced"
+      - name: "Custom Enterprise Application Development"
+        level: "Expert"
+      - name: "AI Tools (Claude, Copilot, Gemini)"
+        level: "Proficient"
+      - name: "Web Security Best Practices and Vulnerability Mitigation"
+        level: "Advanced"
+
+experience:
+  - company: "WebPros LLC"
+    title: "Software / Security / DevSecOps Engineer"
+    period: "07/2022 - 07/2026"
+    location: "Remote"
+    summary: "Maintained core domain reselling applications and architected greenfield security tooling."
+    achievements:
+      - "Architected and built greenfield security applications in Python, Go, Bash, and PHP to enhance platform security, mitigate vulnerabilities, and locate vulnerable packages."
+      - "Maintained primary domain reselling applications utilized by major global domain sellers."
+      - "Managed DevOps workflows and CI/CD pipelines using GitHub Actions, Jenkins, and Phing."
+      - "Architected AI-driven workflows to streamline development, enhance debugging, and automate security analysis."
+      - "Designed scalable database solutions across MySQL, MariaDB, Postgres, and SQLite."
+    technologies: ["PHP", "Laravel", "Golang", "Python", "TypeScript", "Bash", "GitHub Actions", "Jenkins", "MySQL", "Elastic", "Grafana", "Claude", "GitHub Copilot", "Postgres", "SQLite", "Cloudflare", "Custom Enterprise Security", "Atlassian"]
+
+  - company: "TownNews LLC"
+    title: "Software Engineer"
+    period: "06/2020 - 07/2022"
+    location: "Remote"
+    summary: "Developed enterprise applications for industry-leading media CMS systems."
+    achievements:
+      - "Built integrations across multiple systems using third-party APIs and custom ingestion algorithms."
+      - "Interfaced with MongoDB and MySQL databases for media products and streaming platforms."
+      - "Handled product ownership and release management integrating Symfony with custom CMS platforms."
+    technologies: ["PHP", "Symfony", "MongoDB", "MySQL", "REST APIs", "AWS", "FFMPEG"]
+
+  - company: "ECC (Erie Community College)"
+    title: "Asst Professor"
+    period: "02/2021 - 10/2021"
+    location: "Buffalo, NY"
+    summary: "Taught web development and curriculum design."
+    achievements:
+      - "Designed and developed an entry-level certification curriculum for web development."
+      - "Maintained high educational standards and student engagement."
+    technologies: ["Web Development", "Curriculum Design"]
+
+  - company: "The Buffalo News"
+    title: "Sr Software Developer"
+    period: "06/2018 - 06/2020"
+    location: "Buffalo, NY"
+    summary: "Developed subscription APIs and managed AWS infrastructure (Acquired by TownNews parent)."
+    achievements:
+      - "Maintained custom WordPress plugins and developed a subscription & circulation API built in Golang."
+      - "Managed day-to-day AWS DevOps tasks and server infrastructure."
+    technologies: ["Golang", "WordPress", "AWS", "PHP", "MySQL", "JavaScript"]
+
+  - company: "Freelance / Technology Consultant"
+    title: "Technology Consultant"
+    period: "09/2015 - Present"
+    location: "Buffalo, NY"
+    summary: "Consulting for small businesses, local entities, and medical/hydrographics suppliers."
+    achievements:
+      - "Helped businesses maintain online presence through custom websites, WordPress management, SEO, and social media."
+      - "Delivered key solutions for clients under NDA."
+    technologies: ["WordPress", "SEO", "PHP", "Web Security", "JavaScript", "Apache", "Linux", "MySQL", "Cloudflare", "SSL", "FTP/SFTP Administration", "Atlassian"]
+
+  - company: "Virtuvia / CoachMe+"
+    title: "Developer"
+    period: "06/2014 - 09/2015"
+    location: "Buffalo, NY"
+    summary: "Designed sports metrics software and visualization tools."
+    achievements:
+      - "Designed and implemented sports metrics systems and graphical representations using PHP, AngularJS, and web tech."
+    technologies: ["PHP", "AngularJS", "JavaScript"]
+
+  - company: "Mobile Digital Imaging"
+    title: "Chief Technical Officer"
+    period: "04/2012 - 04/2014"
+    location: "Cheektowaga, NY"
+    summary: "Led technical operations and commercial web app development."
+    achievements:
+      - "Designed, built, and maintained customized commercial web applications using PHP, MySQL, JavaScript, and jQuery."
+      - "Implemented Git version control repositories and managed IT infrastructure."
+    technologies: ["PHP", "MySQL", "JavaScript", "jQuery", "Git"]
+
+projects:
+  - id: "project-munitrak"
+    title: "Munitrak"
+    category: "Fullstack / Municipal"
+    summary: "Municipal management and tracking software platform built for streamlined record-keeping, workflow automation, and municipal operations."
+    image: "assets/project1.png"
+    tags: ["PHP", "MySQL", "Laravel", "Web Security"]
+    github: "https://github.com/billythakidd04/Munitrak"
+    demo: "#"
+
+  - id: "project-ommi"
+    title: "OMMI"
+    category: "Healthcare / RIS"
+    summary: "Order Management for Mobile Imaging (OMMI) — a specialized Radiology Information System (RIS) providing scheduling, dispatch, and real-time technician tracking for mobile imaging services."
+    image: "assets/project2.png"
+    tags: ["PHP", "MySQL", "Healthcare RIS", "API Integration"]
+    github: "https://github.com/billythakidd04/OMMI"
+    demo: "#"
+
+  - id: "project-illmortals"
+    title: "Illmortals MC Web"
+    category: "Web Development"
+    summary: "Custom web platform and digital portal designed and developed for Illmortals MC."
+    image: "assets/project3.png"
+    tags: ["PHP", "JavaScript", "HTML5", "CSS3"]
+    github: "https://github.com/billythakidd04/illmortals-mc-web"
+    demo: "#"
+
+  - id: "project-f1-dashboard"
+    title: "F1 Dashboard (WIP)"
+    category: "Frontend / Analytics"
+    summary: "F1 dashboard featuring micro sector times, driver telemetry, and real-time data correlation."
+    image: "assets/project1.png"
+    tags: ["JavaScript", "React", "Micro Sector Times", "Telemetry APIs"]
+    github: "https://github.com/billythakidd04/f1-dashboard"
+    demo: "#"
+
+education:
+  - degree: "Associate Degree in Software Applications and Programming"
+    institution: "ITT Technical Institute (Getzville, NY)"
+    year: "2011"
+    details: "Graduated Sept 2011 • GPA 3.42"
+
+certifications:
+  - name: "GED Certification"
+    issuer: "West Seneca West Sr. HS"
+    year: "2003"
