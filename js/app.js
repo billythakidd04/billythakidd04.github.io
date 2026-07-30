@@ -7,19 +7,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     const response = await fetch('resume.yaml');
-    if (response.ok) {
-      const yamlText = await response.text();
-      if (window.jsyaml) {
-        resumeData = jsyaml.load(yamlText);
-      }
+    if (!response.ok) {
+      throw new Error(`Failed to fetch setup/config file: ${response.status} ${response.statusText}`);
+    }
+    const yamlText = await response.text();
+    if (!window.jsyaml) {
+      throw new Error("jsyaml library is not available.");
+    }
+    resumeData = jsyaml.load(yamlText);
+    if (!resumeData) {
+      throw new Error("Parsed resume data is empty.");
     }
   } catch (err) {
-    console.warn('Could not load resume.yaml live, using fallback data.', err);
-  }
-
-  // Fallback data if YAML fetch is unavailable
-  if (!resumeData) {
-    resumeData = getFallbackData();
+    console.error('Critical Error loading resume.yaml:', err);
+    document.body.innerHTML = `
+      <div style="display:flex; justify-content:center; align-items:center; height:100vh; flex-direction:column; text-align:center; padding:2rem;">
+        <h1 style="color:#ff003c; margin-bottom:1rem;">Error Loading Profile</h1>
+        <p style="color:var(--text-secondary); max-width:500px;">
+          Could not load or parse the required <code>resume.yaml</code> configuration file. <br/><br/>
+          Please ensure the file exists and contains valid YAML formatting.
+        </p>
+      </div>`;
+    return;
   }
 
   // Render Page Sections
@@ -338,73 +347,4 @@ function showToast(message) {
   setTimeout(() => {
     toast.classList.remove('show');
   }, 4000);
-}
-
-function getFallbackData() {
-  return {
-    personal: {
-      name: "Bill Caffery",
-      title: "Senior Software & Systems Engineer",
-      tagline: "Architecting resilient web applications, cloud infrastructure, and intelligent developer tools.",
-      bio: "Passionate software engineer with over 8 years of experience building scalable web solutions, distributed backend services, and high-performance frontend interfaces.",
-      email: "bill.caffery@example.com",
-      github: "https://github.com/billythakidd04",
-      avatar: "assets/profile.png"
-    },
-    stats: [
-      { label: "Years Experience", value: "8+" },
-      { label: "Production Deployments", value: "150+" },
-      { label: "GitHub Contributions", value: "2.4k+" },
-      { label: "Uptime SLA", value: "99.99%" }
-    ],
-    skills: [
-      {
-        category: "Frontend & UI",
-        items: [
-          { name: "HTML5 / CSS3 / Modern Web APIs", level: 95 },
-          { name: "JavaScript (ESNext) / TypeScript", level: 92 },
-          { name: "React / Next.js", level: 88 }
-        ]
-      },
-      {
-        category: "Backend & Cloud",
-        items: [
-          { name: "Node.js / Express / Python", level: 90 },
-          { name: "RESTful APIs / WebSockets", level: 88 },
-          { name: "Docker / CI/CD", level: 86 }
-        ]
-      }
-    ],
-    experience: [
-      {
-        company: "Apex Innovations",
-        title: "Senior Full Stack Engineer",
-        period: "2023 - Present",
-        location: "Remote",
-        summary: "Leading technical development of high-throughput SaaS web applications and cloud infrastructure.",
-        achievements: [
-          "Architected real-time event streaming pipeline processing 5M daily events.",
-          "Spearheaded frontend migration optimizing LCP by 45%."
-        ],
-        technologies: ["Node.js", "TypeScript", "React", "Docker"]
-      }
-    ],
-    projects: [
-      {
-        id: "p1",
-        title: "Neurolytics Dashboard",
-        category: "Fullstack",
-        summary: "Real-time analytics platform featuring dark glassmorphism cards and live streams.",
-        image: "assets/project1.png",
-        tags: ["JavaScript", "WebSockets", "Node.js"],
-        github: "https://github.com/billythakidd04"
-      }
-    ],
-    education: [
-      { degree: "B.S. Computer Science", institution: "State University", year: "2018", details: "Distributed Systems" }
-    ],
-    certifications: [
-      { name: "AWS Solutions Architect", issuer: "AWS", year: "2023" }
-    ]
-  };
 }
