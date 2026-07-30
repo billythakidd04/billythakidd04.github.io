@@ -214,8 +214,21 @@ function setupNavigation() {
     link.addEventListener('click', (e) => {
       links.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
+      
+      const navContainer = document.getElementById('nav-container');
+      if (navContainer && navContainer.classList.contains('active')) {
+        navContainer.classList.remove('active');
+      }
     });
   });
+
+  const mobileToggle = document.getElementById('mobile-menu-btn');
+  const navContainer = document.getElementById('nav-container');
+  if (mobileToggle && navContainer) {
+    mobileToggle.addEventListener('click', () => {
+      navContainer.classList.toggle('active');
+    });
+  }
 }
 
 /* Project Filter Tabs */

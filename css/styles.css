@@ -879,6 +879,16 @@ input:focus, select:focus, textarea:focus {
   pointer-events: auto;
 }
 
+/* Mobile Toggle Defaults */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 860px) {
   .hero-grid {
@@ -907,6 +917,33 @@ input:focus, select:focus, textarea:focus {
   html, body {
     overflow-x: hidden;
     width: 100%;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+  }
+
+  .nav-container.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
   }
 
   .responsive-subgrid, 
