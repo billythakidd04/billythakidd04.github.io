@@ -903,6 +903,18 @@ input:focus, select:focus, textarea:focus {
   }
 }
 
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .responsive-subgrid, 
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* Clean Print Styling */
 @media print {
   body {
